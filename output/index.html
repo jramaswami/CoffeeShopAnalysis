@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Coffee Sales Dashboard</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.plot.ly/plotly-2.34.0.min.js" charset="utf-8"></script>
+        <script src="data.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Coffee Sales Dashboard</h1>
+        </header>
+        <main>
+            <div id="slicer-container">
+                <div id="year-slicer" class="slicer">
+                    <h2 class="slicer-label">Order Year</h2>
+                    <p>
+                        <button onclick="setFilter(this, 'year', '2019')">2019</button>
+                        <button onclick="setFilter(this, 'year', '2020')">2020</button>
+                        <button onclick="setFilter(this, 'year', '2021')">2021</button>
+                        <button onclick="setFilter(this, 'year', '2022')">2022</button>
+                    </p>
+                </div>
+                <div id="roast-type-slicer" class="slicer">
+                    <h2 class="slicer-label">Roast Type</h2>
+                    <p>
+                        <button onclick="setFilter(this, 'roast', 'Dark')">Dark</button>
+                        <button onclick="setFilter(this, 'roast', 'Medium')">Medium</button>
+                        <button onclick="setFilter(this, 'roast', 'Light')">Light</button>
+                    </p>
+                </div>
+                <div id="size-slicer" class="slicer">
+                    <h2 class="slicer-label">Size</h2>
+                    <p>
+                        <button onclick="setFilter(this, 'size', 0.2)">0.2kg</button>
+                        <button onclick="setFilter(this, 'size', 0.5)">0.5kg</button>
+                        <button onclick="setFilter(this, 'size', 1.0)">1.0kg</button>
+                        <button onclick="setFilter(this, 'size', 2.5)">2.5kg</button>
+                    </p>
+                </div>
+                <div id="loyalty-card-slicer" class="slicer">
+                    <h2 class="slicer-label">Loyalty Card</h2>
+                    <p>
+                        <button onclick="setFilter(this, 'loyalty', 'No')">No</button>
+                        <button onclick="setFilter(this, 'loyalty', 'Yes')">Yes</button>
+                    </p>
+                </div>
+            </div>
+            <div id="plots-container">
+                <div id="left-panel" class="panel">
+                    <div id="total-sales-plot" class="plot"></div>
+                </div>
+                <div id="right-panel" class="panel">
+                    <div id="sales-by-country-plot" class="plot"></div>
+                    <div id="top-5-customers-plot" class="plot"></div>
+                </div>
+            </div>
+
+        </main>
+        <script src="plot.js"></script>
+    </body>
+</html>

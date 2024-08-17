@@ -1,0 +1,52 @@
+header {
+    text-align: center;
+    padding: 20px;
+    margin: 30px;
+    background-color: navy;
+    color: white;
+}
+
+#plots-container {
+    display: flex;
+    flex-direction: col;
+    justify-content: space-around;
+}
+
+#left-panel {
+    width: 60%;
+}
+
+#right-panel {
+    width: 35%;
+}
+
+#slicer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slicer {
+    border: solid 1px darkgray;
+    padding: 0 20px;
+}
+
+button {
+    font-size: 125%;
+    width: 5em;
+}
+
+.active-filter {
+    background-color: darkgreen;
+}
+
+.plot {
+    margin: 30px;
+    padding: 20px;
+    border: solid 1px darkgray;
+}
+
+.slicer-label {
+    text-align: center;
+}
