@@ -15,6 +15,10 @@ let roastFilters = [];
 let sizeFilters = [];
 let loyaltyFilters = [];
 
+const BASE_CONFIG = {
+    responsive: true,
+}
+
 function init() {
     drawAllPlots();
 }
@@ -80,13 +84,14 @@ function drawTotalSalesPlot(selectedData) {
 
     const layout = {
         title: 'Total Sales Over Time',
-        height: 600,
+        // height: 595,
         // width: 900,
     };
 
     const config = {
-        responsive: true,
-    }
+        ...BASE_CONFIG,
+    };
+
     Plotly.react('total-sales-plot', traces, layout, config);
 }
 
@@ -122,18 +127,18 @@ function drawSalesByCountryPlot(selectedData) {
 
     const layout = {
         title: "Sales by Country",
-        height: 225,
+        // height: 225,
         // width: 600,
         yaxis: {
             automargin: true,
         }
     };
-    
+
     const config = {
-        responsive: true,
+        ...BASE_CONFIG,
     };
 
-    Plotly.react('sales-by-country-plot', [trace], layout, config);    
+    Plotly.react('sales-by-country-plot', [trace], layout, config);
 }
 
 function drawTop5CustomersPlot(selectedData) {
@@ -169,7 +174,7 @@ function drawTop5CustomersPlot(selectedData) {
 
     const layout = {
         title: 'Top 5 Customers',
-        height: 300,
+        // height: 300,
         // width: 600,
         yaxis: {
             automargin: true,
@@ -177,10 +182,10 @@ function drawTop5CustomersPlot(selectedData) {
     };
 
     const config = {
-        responsive: true,
+        ...BASE_CONFIG,
     };
 
-    Plotly.react('top-5-customers-plot', [trace], layout, config);        
+    Plotly.react('top-5-customers-plot', [trace], layout, config);
 }
 
 function setFilter(buttonElem, filterName, filterValue) {

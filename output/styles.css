@@ -1,30 +1,41 @@
-header {
-    text-align: center;
-    padding: 20px;
-    margin: 30px;
-    background-color: navy;
+#container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 3fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 20px;
+}
+
+#header {
+    grid-area: 1 / 1 / 2 / 3;
+    justify-self: stretch;
     color: white;
-}
-
-#plots-container {
-    display: flex;
-    flex-direction: col;
-    justify-content: space-around;
-}
-
-#left-panel {
-    width: 60%;
-}
-
-#right-panel {
-    width: 35%;
+    background-color: navy;
+text-align: center;
 }
 
 #slicer-container {
+    grid-area: 2 / 1 / 3 / 3;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
+}
+
+#total-sales-plot {
+    grid-area: 3 / 1 / 5 / 2;
+    border: 1px solid gray;
+}
+
+#sales-by-country-plot {
+    grid-area: 3 / 2 / 4 / 3;
+    border: 1px solid gray;
+}
+
+#top-5-customers-plot {
+    grid-area: 4 / 2 / 5 / 3;
+    border: 1px solid gray;
 }
 
 .slicer {
@@ -33,20 +44,9 @@ header {
 }
 
 button {
-    font-size: 125%;
     width: 5em;
 }
 
 .active-filter {
     background-color: darkgreen;
-}
-
-.plot {
-    margin: 30px;
-    padding: 20px;
-    border: solid 1px darkgray;
-}
-
-.slicer-label {
-    text-align: center;
 }
