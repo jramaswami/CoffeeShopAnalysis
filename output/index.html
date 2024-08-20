@@ -17,34 +17,44 @@
                 <div id="year-slicer" class="slicer">
                     <h4 class="slicer-label">Order Year</h4>
                     <p>
-                        <button onclick="setFilter(this, 'year', '2019')">2019</button>
-                        <button onclick="setFilter(this, 'year', '2020')">2020</button>
-                        <button onclick="setFilter(this, 'year', '2021')">2021</button>
-                        <button onclick="setFilter(this, 'year', '2022')">2022</button>
+                        <button class="year-slicer-button" onclick="setFilter(this, 'year', '2019')">2019</button>
+                        <button class="year-slicer-button" onclick="setFilter(this, 'year', '2020')">2020</button>
+                        <button class="year-slicer-button" onclick="setFilter(this, 'year', '2021')">2021</button>
+                        <button class="year-slicer-button" onclick="setFilter(this, 'year', '2022')">2022</button>
+                        <button onclick="clearFilter('year')" title="Remove Year Slicers">X</button>
                     </p>
                 </div>
                 <div id="roast-type-slicer" class="slicer">
                     <h4 class="slicer-label">Roast Type</h4>
                     <p>
-                        <button onclick="setFilter(this, 'roast', 'Dark')">Dark</button>
-                        <button onclick="setFilter(this, 'roast', 'Medium')">Medium</button>
-                        <button onclick="setFilter(this, 'roast', 'Light')">Light</button>
+                        <button class="roast-slicer-button" onclick="setFilter(this, 'roast', 'Dark')">Dark</button>
+                        <button class="roast-slicer-button" onclick="setFilter(this, 'roast', 'Medium')">Medium</button>
+                        <button class="roast-slicer-button" onclick="setFilter(this, 'roast', 'Light')">Light</button>
+                        <button onclick="clearFilter('roast')" title="Remove Roast Type Slicers">X</button>
                     </p>
                 </div>
                 <div id="size-slicer" class="slicer">
                     <h4 class="slicer-label">Size</h4>
                     <p>
-                        <button onclick="setFilter(this, 'size', 0.2)">0.2kg</button>
-                        <button onclick="setFilter(this, 'size', 0.5)">0.5kg</button>
-                        <button onclick="setFilter(this, 'size', 1.0)">1.0kg</button>
-                        <button onclick="setFilter(this, 'size', 2.5)">2.5kg</button>
+                        <button class="size-slicer-button" onclick="setFilter(this, 'size', 0.2)">0.2kg</button>
+                        <button class="size-slicer-button" onclick="setFilter(this, 'size', 0.5)">0.5kg</button>
+                        <button class="size-slicer-button" onclick="setFilter(this, 'size', 1.0)">1.0kg</button>
+                        <button class="size-slicer-button" onclick="setFilter(this, 'size', 2.5)">2.5kg</button>
+                        <button onclick="clearFilter('size')" title="Remove Size Slicers">X</button>
                     </p>
                 </div>
                 <div id="loyalty-card-slicer" class="slicer">
                     <h4 class="slicer-label">Loyalty Card</h4>
                     <p>
-                        <button onclick="setFilter(this, 'loyalty', 'No')">No</button>
-                        <button onclick="setFilter(this, 'loyalty', 'Yes')">Yes</button>
+                        <button class="loyalty-slicer-button" onclick="setFilter(this, 'loyalty', 'No')">No</button>
+                        <button class="loyalty-slicer-button" onclick="setFilter(this, 'loyalty', 'Yes')">Yes</button>
+                        <button onclick="clearFilter('loyalty')" title="Remove Loyalty Card Slicers">X</button>
+                    </p>
+                </div>
+                <div class="slicer">
+                    <h4 class="slicer-label">Reset</h4>
+                    <p>
+                        <button onclick="clearFilter('all')" title="Remove All Slicers">X</button>
                     </p>
                 </div>
             </div>

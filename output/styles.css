@@ -12,7 +12,7 @@
     justify-self: stretch;
     color: white;
     background-color: navy;
-text-align: center;
+    text-align: center;
 }
 
 #slicer-container {
@@ -48,5 +48,10 @@ button {
 }
 
 .active-filter {
-    background-color: darkgreen;
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+h4 {
+    text-align: center;
 }

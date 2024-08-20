@@ -225,4 +225,44 @@ function setFilter(buttonElem, filterName, filterValue) {
     drawAllPlots();
 }
 
+function clearFilter(filterName) {
+    if (filterName === 'all' || filterName === 'year') {
+        const buttonElems = document.getElementsByClassName('year-slicer-button');
+        for (let buttonElem of buttonElems) {
+            if (buttonElem.classList.contains('active-filter')) {
+                buttonElem.classList.remove('active-filter');
+            }
+        }
+        yearFilters.length = 0;
+    }
+    if (filterName === 'all' || filterName === 'roast') {
+        const buttonElems = document.getElementsByClassName('roast-slicer-button');
+        for (let buttonElem of buttonElems) {
+            if (buttonElem.classList.contains('active-filter')) {
+                buttonElem.classList.remove('active-filter');
+            }
+        }
+        roastFilters.length = 0;
+    }
+    if (filterName === 'all' || filterName === 'size') {
+        const buttonElems = document.getElementsByClassName('size-slicer-button');
+        for (let buttonElem of buttonElems) {
+            if (buttonElem.classList.contains('active-filter')) {
+                buttonElem.classList.remove('active-filter');
+            }
+        }
+        sizeFilters.length = 0;
+    }
+    if (filterName === 'all' || filterName === 'loyalty') {
+        const buttonElems = document.getElementsByClassName('loyalty-slicer-button');
+        for (let buttonElem of buttonElems) {
+            if (buttonElem.classList.contains('active-filter')) {
+                buttonElem.classList.remove('active-filter');
+            }
+        }
+        loyaltyFilters.length = 0;
+    }
+    drawAllPlots();
+}
+
 init();
